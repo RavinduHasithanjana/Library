@@ -21,7 +21,7 @@ mongoose.connect(mongoDbConfig.mongoURI, mongoDbConfig.options)
     });
 
 app.use('/author', authorRoute);
-app.use('/book', authorRoute);
+app.use('/book', bookRoute);
 
 // Default route
 app.get('/', (req, res) => {

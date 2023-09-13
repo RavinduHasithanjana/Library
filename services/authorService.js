@@ -4,9 +4,10 @@ class AuthorService {
 
     async getAllAuthors() {
         try {
-            const allAuthors = await Author.findAll();
+            const allAuthors = await Author.find();
             return allAuthors;
         } catch (error) {
+            console.log(error);
             throw new Error('Error fetching all authors from the database');
         }
     }
