@@ -4,12 +4,12 @@ const router = express.Router();
 const bookController = require('../controllers/bookController');
 
 // GET ALL books with pagination 
-router.get('/getservice', bookController.getAllService);
+router.get('/getallbooks', bookController.getAllBooks);
 
 // GET  Book BY ID
-router.get('/getproducts', bookController.getAllProducts);
+router.get('/getbookbyid/:id', bookController.getBookById);
 
 // ADD Book
-router.get('/getproducts', bookController.getAllProducts);
+router.post('/addbook', bookController.addBook);
 
 module.exports = router;

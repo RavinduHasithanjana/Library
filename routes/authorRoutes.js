@@ -4,12 +4,12 @@ const router = express.Router();
 const authorController = require('../controllers/authorController');
 
 // GET ALL Authors 
-router.get('/getservice', authorController.getAllService);
+router.get('/getall', authorController.getAllAuthors);
 
 // GET  Author BY ID
-router.get('/getproducts', authorController.getAllProducts);
+router.get('/getbyid/:id', authorController.getAuthorById);
 
 // ADD AUTHOR
-router.get('/getproducts', authorController.getAllProducts);
+router.post('/add', authorController.addAuthor);
 
 module.exports = router;
